@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace YSCloud.Gainscha.CloudPrinter
 {
-    class CloudPrinterOptions
+    public class CloudPrinterOptions
     {
+        public string MemberCode { get; set; }
+
+        public string ApiKey { get; set; }
+
+        public string ServiceUrl { get; set; }
+
+        public int CheckUpdateTime { get; set; } = 3;
     }
 }

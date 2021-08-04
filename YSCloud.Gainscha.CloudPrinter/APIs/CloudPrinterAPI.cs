@@ -1,8 +1,4 @@
 ﻿using Refit;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using YSCloud.Gainscha.CloudPrinter.Requests;
 using YSCloud.Gainscha.CloudPrinter.Responses;
@@ -22,5 +18,8 @@ namespace YSCloud.Gainscha.CloudPrinter.APIs
 
         [Post("/templetPrint")]
         Task<BaseResponse> PrintByTemplate([Body(BodySerializationMethod.UrlEncoded)] PrintByTemplateRequest request);
+
+        [Get("/getStatus")]
+        Task<GetPrinterStatusResponse> GetPrinterStatus(GetPrinterStatusRequest request);
     }
 }
