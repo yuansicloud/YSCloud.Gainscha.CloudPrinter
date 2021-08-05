@@ -15,7 +15,7 @@ namespace YSCloud.Gainscha.CloudPrinter.Responses
 
         public void Validate()
         {
-            if (Code != 0 || Code != 1)
+            if (Code != 0 && Code != 1)
             {
                 throw new UserFriendlyException(Msg, Code.ToString());
             }
