@@ -29,6 +29,7 @@ namespace YSCloud.Gainscha.CloudPrinter.Requests
             string apiKey,
             string memberCode,
             string deviceId,
+            string data,
             string charset = "1",
             string msgNo = null,
             int reprint = 0,
@@ -42,6 +43,7 @@ namespace YSCloud.Gainscha.CloudPrinter.Requests
             MsgNo = msgNo;
             Reprint = reprint;
             Multi = multi;
+            Data = data;
         }
     }
 }
