@@ -29,6 +29,7 @@ namespace YSCloud.Gainscha.CloudPrinter.Requests
             string apiKey,
             string memberCode,
             string deviceId,
+            string templateId,
             string data,
             string charset = "1",
             string msgNo = null,
@@ -39,6 +40,7 @@ namespace YSCloud.Gainscha.CloudPrinter.Requests
             SecurityCode = MD5POSCOM(memberCode + deviceId + msgNo ?? string.Empty + ReqTime + apiKey);
             MemberCode = memberCode;
             DeviceId = deviceId;
+            TemplateId = templateId;
             Charset = charset;
             MsgNo = msgNo;
             Reprint = reprint;
