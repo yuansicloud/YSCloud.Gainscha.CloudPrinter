@@ -37,7 +37,7 @@ namespace YSCloud.Gainscha.CloudPrinter.Requests
             int multi = 0)
         {
             ReqTime = GetTimeStamp();
-            SecurityCode = MD5POSCOM(memberCode + deviceId + msgNo ?? string.Empty + ReqTime + apiKey);
+            SecurityCode = MD5POSCOM(memberCode + deviceId + msgNo + ReqTime + apiKey);
             MemberCode = memberCode;
             DeviceId = deviceId;
             TemplateId = templateId;

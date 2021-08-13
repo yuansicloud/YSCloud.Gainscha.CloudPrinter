@@ -35,21 +35,21 @@ namespace YSCloud.Gainscha.CloudPrinter.Requests
         public string Token { get; set; }
 
         public SendMessageRequest(
-            string apiKey, 
-            string memberCode, 
+            string apiKey,
+            string memberCode,
             string deviceId,
-            string msgDetail, 
+            string msgDetail,
             string charset = "1",
-            string mode = "2", 
-            string msgNo = null, 
-            int reprint = 0, 
+            string mode = "2",
+            string msgNo = null,
+            int reprint = 0,
             int multi = 0,
-            int times = 1, 
+            int times = 1,
             string voice = null,
             string token = null)
         {
             ReqTime = GetTimeStamp();
-            SecurityCode = MD5POSCOM(memberCode + deviceId + msgNo ?? string.Empty + ReqTime + apiKey);
+            SecurityCode = MD5POSCOM(memberCode + deviceId + msgNo + ReqTime + apiKey);
             MemberCode = memberCode;
             DeviceId = deviceId;
             MsgDetail = msgDetail;
